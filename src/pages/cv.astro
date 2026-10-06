@@ -1,0 +1,217 @@
+---
+import Layout from '../layouts/Layout.astro';
+import '../styles/profile.css';
+---
+
+<Layout>
+  <main class="profile-page cv-page">
+
+    <section class="cv-hero">
+      <p class="page-label">Curriculum Vitae</p>
+
+      <h1>Jonas Németh</h1>
+
+      <div class="cv-summary">
+        <p>
+          Systems administrator in healthcare, primarily working with Melior.
+          My background includes healthcare, healthcare IT and Information
+          Technology studies at Chalmers University.
+        </p>
+
+        <div class="cv-location">
+          <span>Based in</span>
+          <strong>Gothenburg, Sweden</strong>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="cv-section">
+      <div class="cv-section-title">
+        <span>01</span>
+        <h2>Experience</h2>
+      </div>
+
+      <div class="cv-items">
+
+        <article class="cv-item">
+          <div class="cv-item-meta">
+            <span>Current</span>
+            <span>Healthcare · VGR</span>
+          </div>
+
+          <div class="cv-item-content">
+            <h3>Systems administration</h3>
+
+            <p>
+              Work primarily with Melior, including configuration, access management,
+              incident handling and troubleshooting.
+            </p>
+
+            <p>
+              Investigate integrations and information flows between systems,
+              analyse logs and coordinate troubleshooting with technical
+              teams and other parts of the organisation.
+            </p>
+          </div>
+        </article>
+
+        <article class="cv-item">
+          <div class="cv-item-meta">
+            <span>Previous</span>
+            <span>Healthcare IT</span>
+          </div>
+
+          <div class="cv-item-content">
+            <h3>Configuration</h3>
+
+            <p>
+              Worked with healthcare IT configuration and processes, translating
+              operational requirements into system configuration.
+            </p>
+          </div>
+        </article>
+
+        <article class="cv-item">
+          <div class="cv-item-meta">
+            <span>Earlier</span>
+            <span>Healthcare</span>
+          </div>
+
+          <div class="cv-item-content">
+            <h3>Clinical healthcare background</h3>
+
+            <p>
+              Worked in patient-facing healthcare before moving into healthcare IT
+              and systems administration.
+            </p>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+
+    <section class="cv-section">
+      <div class="cv-section-title">
+        <span>02</span>
+        <h2>Education</h2>
+      </div>
+
+      <div class="cv-items">
+
+        <article class="cv-item">
+          <div class="cv-item-meta">
+            <span>Chalmers University of Technology</span>
+            <span>Gothenburg</span>
+          </div>
+
+          <div class="cv-item-content">
+            <h3>Information Technology</h3>
+
+            <p>
+              Studied Information Technology, including software development,
+              computer systems and networking.
+            </p>
+
+            <a class="inline-link" href="/projects/bachelor-project">
+              Bachelor Project <span aria-hidden="true">→</span>
+            </a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+
+    <section class="cv-section">
+      <div class="cv-section-title">
+        <span>03</span>
+        <h2>Technical focus</h2>
+      </div>
+
+      <div class="skills-grid">
+
+        <div>
+          <span>Systems</span>
+          <strong>Linux · Windows · Healthcare IT</strong>
+        </div>
+
+        <div>
+          <span>Networking</span>
+          <strong>TCP/IP · DNS · VLANs · VPN · Firewalls</strong>
+        </div>
+
+        <div>
+          <span>Infrastructure</span>
+          <strong>Docker · Docker Compose · Caddy · UniFi</strong>
+        </div>
+
+        <div>
+          <span>Automation</span>
+          <strong>Home Assistant · ESPHome · AutoHotkey</strong>
+        </div>
+
+        <div>
+          <span>Development</span>
+          <strong>Java · Go · Web technologies</strong>
+        </div>
+
+        <div>
+          <span>Embedded</span>
+          <strong>ESP32 · Sensors · Hardware prototyping</strong>
+        </div>
+
+      </div>
+    </section>
+
+
+    <section class="cv-projects">
+      <div class="cv-section-title">
+        <span>04</span>
+        <h2>Selected projects</h2>
+      </div>
+
+      <div class="cv-project-links">
+
+        <a href="/projects/hugin">
+          <span>01</span>
+          <strong>Hugin</strong>
+          <small>Embedded systems · Home automation</small>
+          <b aria-hidden="true">→</b>
+        </a>
+
+        <a href="/projects/homelab">
+          <span>02</span>
+          <strong>Homelab</strong>
+          <small>Linux · Networking · Self-hosting</small>
+          <b aria-hidden="true">→</b>
+        </a>
+
+        <a href="/projects/bachelor-project">
+          <span>03</span>
+          <strong>Bachelor Project</strong>
+          <small>Chalmers group project · Network-based device monitoring</small>
+          <b aria-hidden="true">→</b>
+        </a>
+
+      </div>
+    </section>
+
+
+    <section class="cv-closing">
+      <p>
+        Project code and documentation are available on GitHub.
+      </p>
+
+      <a
+        href="https://github.com/Pdoxxy"
+        target="_blank"
+        rel="noreferrer"
+      >
+        github.com/Pdoxxy <span aria-hidden="true">↗</span>
+      </a>
+    </section>
+
+  </main>
+</Layout>

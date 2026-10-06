@@ -1,0 +1,277 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import '../../styles/bachelor-project.css';
+---
+
+<Layout>
+  <main class="bachelor-page">
+
+    <section class="bachelor-hero">
+      <div class="bachelor-heading">
+        <a class="back-link" href="/projects">← Projects</a>
+
+        <p class="bachelor-label">
+          03 · Chalmers · Networking · Software development
+        </p>
+
+        <h1 class="bachelor-title">
+          Bachelor<br />
+          Project
+        </h1>
+
+        <p class="bachelor-intro">
+          A six-person Chalmers project exploring a network-driven approach
+          to detecting when shared computers stop reporting.
+        </p>
+      </div>
+
+      <div class="bachelor-meta">
+        <div>
+          <span>Context</span>
+          <strong>Chalmers University of Technology</strong>
+        </div>
+
+        <div>
+          <span>Team</span>
+          <strong>Six-person group project</strong>
+        </div>
+
+        <div>
+          <span>Focus</span>
+          <strong>Networking · Backend · Monitoring</strong>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="story-section">
+      <div class="story-heading">
+        <span>Problem</span>
+
+        <h2>
+          When a computer<br />
+          stops reporting.
+        </h2>
+      </div>
+
+      <div class="story-copy">
+        <p>
+          Shared computers can be spread across several locations, making it
+          difficult to notice quickly when one is disconnected or stolen.
+        </p>
+
+        <p>
+          Our group explored whether network discovery and heartbeat signals could
+          provide an early indication that a computer had disappeared. A missing heartbeat could
+          flag a device for investigation, but could not determine why it had stopped reporting.
+        </p>
+      </div>
+    </section>
+
+
+    <section class="system-section">
+      <div class="system-heading">
+        <span>System concept</span>
+
+        <h2>
+          Tracking devices<br />
+          through heartbeats.
+        </h2>
+
+        <p>
+          The prototype combined network discovery with a lightweight client
+          that sent heartbeat signals to a central backend. The backend used
+          them to track which known devices were reporting and flag those that stopped.
+        </p>
+      </div>
+
+      <div class="system-flow">
+
+        <div class="system-node">
+          <span class="node-number">01</span>
+          <div>
+            <strong>Shared computer</strong>
+            <p>Monitored endpoint</p>
+          </div>
+        </div>
+
+        <div class="system-connector" aria-hidden="true">
+          <span></span>
+        </div>
+
+        <div class="system-node system-node-accent">
+          <span class="node-number">02</span>
+          <div>
+            <strong>Heartbeat client</strong>
+            <p>Go · scheduled execution</p>
+          </div>
+        </div>
+
+        <div class="system-connector" aria-hidden="true">
+          <span></span>
+        </div>
+
+        <div class="system-node">
+          <span class="node-number">03</span>
+          <div>
+            <strong>Backend</strong>
+            <p>Spring Boot · device state</p>
+          </div>
+        </div>
+
+        <div class="system-connector system-connector-alert" aria-hidden="true">
+          <span></span>
+        </div>
+
+        <div class="system-node system-node-alert">
+          <span class="node-number">04</span>
+          <div>
+            <strong>Missing heartbeat</strong>
+            <p>Flagged for investigation</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <section class="contribution-section">
+      <div class="contribution-heading">
+        <span>My contribution</span>
+
+        <h2>
+          Backend, heartbeats<br />
+          and documentation.
+        </h2>
+
+        <p>
+          I worked on the backend and heartbeat mechanism, helped coordinate
+          the early stages of the project and contributed to writing and editing the report.
+          The system itself was designed and built by the six-person team.
+        </p>
+      </div>
+
+      <div class="contribution-grid">
+
+        <article>
+          <span>01</span>
+          <h3>Backend development</h3>
+          <p>
+            Contributed to backend functionality for handling monitored
+            devices and their stored state.
+          </p>
+        </article>
+
+        <article>
+          <span>02</span>
+          <h3>Heartbeat mechanism</h3>
+          <p>
+            Worked on the mechanism used to determine whether monitored
+            computers were still reporting to the system.
+          </p>
+        </article>
+
+        <article>
+          <span>03</span>
+          <h3>Project coordination</h3>
+          <p>
+            Helped coordinate the early stages of the project and took part
+            in technical discussions and decisions.
+          </p>
+        </article>
+
+        <article>
+          <span>04</span>
+          <h3>Report editing</h3>
+          <p>
+            Contributed to writing and editing the group report, including
+            editorial work across the document.
+          </p>
+        </article>
+
+      </div>
+    </section>
+
+
+    <section class="technology-section">
+      <div class="technology-heading">
+        <span>Technology</span>
+
+        <h2>
+          Tools used<br />
+          in the prototype.
+        </h2>
+      </div>
+
+      <div class="technology-list">
+
+        <div>
+          <span>Client</span>
+          <strong>Go</strong>
+          <p>Client for sending heartbeat signals from monitored computers.</p>
+        </div>
+
+        <div>
+          <span>Backend</span>
+          <strong>Java · Spring Boot</strong>
+          <p>Application logic and central handling of device information.</p>
+        </div>
+
+        <div>
+          <span>Data</span>
+          <strong>H2 · JdbcTemplate</strong>
+          <p>Persistence and database access during development.</p>
+        </div>
+
+        <div>
+          <span>Network</span>
+          <strong>Nmap</strong>
+          <p>Discovering devices on the network.</p>
+        </div>
+
+        <div>
+          <span>Endpoint</span>
+          <strong>Windows Task Scheduler</strong>
+          <p>Running the heartbeat client automatically on monitored systems.</p>
+        </div>
+
+      </div>
+    </section>
+
+
+    <section class="lesson-section">
+      <div class="lesson-heading">
+        <span>What I took from it</span>
+
+        <h2>
+          Building one system<br />
+          as a team.
+        </h2>
+      </div>
+
+      <div class="lesson-copy">
+        <p>
+          The project gave me practical experience with networking and backend
+          development, but also with taking a problem through research and design to a
+          working prototype.
+        </p>
+
+        <p>
+          Working as a team meant bringing together code, ideas
+          and decisions from different parts of the project, then testing
+          the result and documenting it in a shared report.
+        </p>
+      </div>
+    </section>
+
+
+    <section class="bachelor-closing">
+      <span>Chalmers · 2025</span>
+
+      <p>
+        Researched, designed and built collaboratively by the project team.
+      </p>
+    </section>
+
+  </main>
+</Layout>

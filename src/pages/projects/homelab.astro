@@ -1,0 +1,324 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import '../../styles/homelab.css';
+---
+
+<Layout>
+  <main class="homelab-page">
+
+    <section class="homelab-hero">
+      <div class="homelab-heading">
+        <a class="back-link" href="/projects">← Projects</a>
+
+        <p class="homelab-label">
+          02 · Linux · Networking · Self-hosting
+        </p>
+
+        <h1 class="homelab-title">Homelab</h1>
+
+        <p class="homelab-intro">
+          What started as a home server has grown into a homelab where I run
+          the services I use at home and learn as I build, maintain and troubleshoot it.
+        </p>
+      </div>
+
+      <div class="homelab-meta">
+        <div>
+          <span>Platform</span>
+          <strong>Ubuntu Linux</strong>
+        </div>
+
+        <div>
+          <span>Infrastructure</span>
+          <strong>Docker · UniFi</strong>
+        </div>
+
+        <div>
+          <span>Focus</span>
+          <strong>Networking · Automation · Self-hosting</strong>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="story-section">
+      <div class="story-heading">
+        <span>Overview</span>
+
+        <h2>
+          My server.<br />
+          My home network.
+        </h2>
+      </div>
+
+      <div class="story-copy">
+        <p>
+          Today, the homelab consists of an Ubuntu server running most of my services in
+          Docker, alongside a UniFi-managed network and Home Assistant for home
+          automation.
+        </p>
+
+        <p>
+          Because I use it every day, it has also become a practical place to learn.
+          When something breaks, I have to work out whether the problem is in
+          a container, the host, DNS or the network.
+        </p>
+      </div>
+    </section>
+
+
+    <section class="network-section">
+      <div class="network-heading">
+        <span>Architecture</span>
+
+        <h2>
+          How the network<br />
+          is arranged.
+        </h2>
+
+        <p>
+          UniFi handles routing, firewall rules and network segmentation.
+          The Ubuntu server runs most of my self-hosted services.
+        </p>
+      </div>
+
+      <div class="network-map" aria-label="Simplified homelab architecture">
+
+        <div class="network-tier">
+          <div class="network-tier-label">
+            <span>01</span>
+            Edge
+          </div>
+
+          <div class="network-node network-node-main">
+            <span class="node-type">WAN</span>
+            <strong>Internet</strong>
+            <small>Internet connection</small>
+          </div>
+        </div>
+
+        <div class="network-link" aria-hidden="true">
+          <span></span>
+        </div>
+
+        <div class="network-tier">
+          <div class="network-tier-label">
+            <span>02</span>
+            Network
+          </div>
+
+          <div class="network-node network-node-accent">
+            <span class="node-type">GATEWAY</span>
+            <strong>UniFi</strong>
+            <small>Routing · firewall · segmentation</small>
+          </div>
+        </div>
+
+        <div class="network-link" aria-hidden="true">
+          <span></span>
+        </div>
+
+        <div class="network-tier">
+          <div class="network-tier-label">
+            <span>03</span>
+            Segments
+          </div>
+
+          <div class="network-branches">
+            <div class="network-node">
+              <span class="node-type">LAN</span>
+              <strong>Trusted devices</strong>
+              <small>Workstations · server</small>
+            </div>
+
+            <div class="network-node">
+              <span class="node-type">VLAN</span>
+              <strong>IoT</strong>
+              <small>Separated smart devices</small>
+            </div>
+
+            <div class="network-node">
+              <span class="node-type">VPN</span>
+              <strong>Remote access</strong>
+              <small>VPN access from outside</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="network-link" aria-hidden="true">
+          <span></span>
+        </div>
+
+        <div class="network-tier">
+          <div class="network-tier-label">
+            <span>04</span>
+            Compute
+          </div>
+
+          <div class="network-node network-node-server">
+            <span class="node-type">LINUX</span>
+            <strong>Ubuntu server</strong>
+            <small>Docker · storage · automation</small>
+          </div>
+        </div>
+
+        <div class="network-link" aria-hidden="true">
+          <span></span>
+        </div>
+
+        <div class="network-tier">
+          <div class="network-tier-label">
+            <span>05</span>
+            Services
+          </div>
+
+          <div class="service-grid">
+            <div>DNS</div>
+            <div>Automation</div>
+            <div>Media</div>
+            <div>Monitoring</div>
+            <div>Web hosting</div>
+            <div>Reverse proxy</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <section class="principles-section">
+      <div class="principles-heading">
+        <span>Approach</span>
+
+        <h2>
+          How I run<br />
+          the homelab.
+        </h2>
+      </div>
+
+      <div class="principles-grid">
+
+        <article class="principle">
+          <span>01</span>
+          <h3>Keep it local</h3>
+          <p>
+            I prefer running services locally when it makes
+            sense, especially for home automation and services I rely on at home.
+          </p>
+        </article>
+
+        <article class="principle">
+          <span>02</span>
+          <h3>Segment deliberately</h3>
+          <p>
+            I keep IoT devices separate from trusted systems and use firewall
+            rules to allow only the traffic they actually need.
+          </p>
+        </article>
+
+        <article class="principle">
+          <span>03</span>
+          <h3>Understand what breaks</h3>
+          <p>
+            When something fails, I want to understand where and why rather
+            than simply getting it working again.
+          </p>
+        </article>
+
+        <article class="principle">
+          <span>04</span>
+          <h3>Keep it maintainable</h3>
+          <p>
+            I organise services into Docker Compose stacks to keep configuration,
+            updates and changes manageable.
+          </p>
+        </article>
+
+      </div>
+    </section>
+
+
+    <section class="stack-section">
+      <div class="stack-heading">
+        <span>Stack</span>
+
+        <h2>
+          What I use at home.
+        </h2>
+      </div>
+
+      <div class="stack-list">
+        <div>
+          <span>Operating system</span>
+          <strong>Ubuntu Linux</strong>
+        </div>
+
+        <div>
+          <span>Containers</span>
+          <strong>Docker · Docker Compose</strong>
+        </div>
+
+        <div>
+          <span>Networking</span>
+          <strong>UniFi · VLANs · Firewalls</strong>
+        </div>
+
+        <div>
+          <span>DNS</span>
+          <strong>Pi-hole</strong>
+        </div>
+
+        <div>
+          <span>Remote access</span>
+          <strong>WireGuard · Teleport</strong>
+        </div>
+
+        <div>
+          <span>Automation</span>
+          <strong>Home Assistant · ESPHome</strong>
+        </div>
+
+        <div>
+          <span>Web</span>
+          <strong>Caddy · HTTPS · Astro</strong>
+        </div>
+
+        <div>
+          <span>Administration</span>
+          <strong>SSH · UFW · Fail2Ban</strong>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="homelab-closing">
+      <div class="closing-heading">
+        <span>Ongoing project</span>
+
+        <h2>
+          Built to be used.<br />
+          Never really finished.
+        </h2>
+      </div>
+
+      <div class="closing-content">
+        <p>
+          The homelab changes as I find new things I want to run, improve or
+          understand. I document the setup as it evolves, both for my own reference
+          and to keep track of how and why things are configured.
+        </p>
+
+        <a
+          class="github-link"
+          href="https://github.com/Pdoxxy/homelab-infrastructure"
+          target="_blank"
+          rel="noreferrer"
+        >
+          View infrastructure documentation on GitHub
+          <span aria-hidden="true">↗</span>
+        </a>
+      </div>
+    </section>
+
+  </main>
+</Layout>

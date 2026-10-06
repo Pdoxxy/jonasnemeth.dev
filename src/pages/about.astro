@@ -1,0 +1,133 @@
+---
+import Layout from '../layouts/Layout.astro';
+import '../styles/profile.css';
+---
+
+<Layout>
+  <main class="profile-page">
+
+    <section class="profile-hero">
+      <div>
+        <p class="page-label">About</p>
+
+        <h1>
+          I like knowing what my systems
+          <span>are actually doing.</span>
+        </h1>
+      </div>
+
+      <p class="profile-intro">
+        I'm Jonas Németh, a systems administrator
+        based in Gothenburg, Sweden.
+      </p>
+    </section>
+
+
+    <section class="about-story">
+      <div class="section-heading">
+        <span>Background</span>
+        <h2>Work, studies and home projects.</h2>
+      </div>
+
+      <div class="about-copy">
+        <p>
+          I work with systems administration in healthcare, primarily with
+          Melior. That includes configuration, access management and
+          troubleshooting, as well as investigating integrations and logs.
+        </p>
+
+        <p>
+          I have studied Information Technology at Chalmers. Outside work,
+          I spend a lot of time learning more about Linux, networking,
+          automation and embedded systems by building things of my own.
+        </p>
+
+        <p>
+          Most of my projects start with something I want at home: a server,
+          a segmented network, a room sensor or an automation. I enjoy
+          getting it working and figuring out what went wrong when it does not.
+        </p>
+      </div>
+    </section>
+
+
+    <section class="interests-section">
+      <div class="section-heading">
+        <span>What interests me</span>
+
+        <h2>
+          Things I keep
+          coming back to.
+        </h2>
+      </div>
+
+      <div class="interest-grid">
+        <article>
+          <span>01</span>
+          <h3>Networking</h3>
+          <p>
+            Routing, segmentation, DNS and remote access on my home network.
+          </p>
+        </article>
+
+        <article>
+          <span>02</span>
+          <h3>Linux & infrastructure</h3>
+          <p>
+            Running services in Docker on my Ubuntu server, including
+            configuration, updates and troubleshooting.
+          </p>
+        </article>
+
+        <article>
+          <span>03</span>
+          <h3>Automation</h3>
+          <p>
+            Finding ways to remove repetitive work, from small scripts
+            to home automations.
+          </p>
+        </article>
+
+        <article>
+          <span>04</span>
+          <h3>Embedded systems</h3>
+          <p>
+            Building room sensors with microcontrollers and connecting them
+            to Home Assistant.
+          </p>
+        </article>
+      </div>
+    </section>
+
+
+    <section class="about-closing">
+      <div>
+        <span>Elsewhere</span>
+
+        <h2>
+          Projects, code
+          and experience.
+        </h2>
+      </div>
+
+      <div class="about-links">
+        <a href="/projects">
+          View projects <span aria-hidden="true">→</span>
+        </a>
+
+        <a href="/cv">
+          View CV <span aria-hidden="true">→</span>
+        </a>
+
+        <a
+          href="https://github.com/Pdoxxy"
+          target="_blank"
+          rel="noreferrer"
+        >
+          GitHub <span aria-hidden="true">↗</span>
+        </a>
+      </div>
+    </section>
+
+  </main>
+</Layout>

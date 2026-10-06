@@ -1,11 +1,283 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import '../styles/home.css';
 ---
 
 <Layout>
-	<Welcome />
+  <main class="home">
+    <section class="home-hero">
+
+      <div class="hero-copy">
+        <p class="hero-eyebrow">
+          Systems · Networking · Automation
+        </p>
+
+        <h1 class="hero-title">
+          <span>Jonas</span>
+          <span>Németh</span>
+        </h1>
+
+        <p class="hero-intro">
+          I work with systems administration, and spend much of my spare time
+          on projects involving Linux, networking, automation and embedded systems.
+        </p>
+
+        <div class="hero-actions">
+          <a class="hero-primary" href="/projects">
+            View projects <span aria-hidden="true">→</span>
+          </a>
+
+          <a class="hero-secondary" href="/cv">
+            View CV
+          </a>
+
+          <a
+            class="hero-secondary"
+            href="https://github.com/Pdoxxy"
+            target="_blank"
+            rel="noreferrer"
+          >
+            GitHub <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-visual" aria-hidden="true">
+        <div class="visual-grid"></div>
+
+        <div class="visual-node node-one">
+          <span></span>
+          HUGIN
+        </div>
+
+        <div class="visual-node node-two">
+          <span></span>
+          HOMELAB
+        </div>
+
+        <div class="visual-node node-three">
+          <span></span>
+          BACHELOR PROJECT
+        </div>
+
+        <div class="visual-core">
+          <span>PROJECTS</span>
+        </div>
+        <svg
+          class="visual-links"
+          viewBox="0 0 100 100"
+          preserveAspectRatio="none"
+          aria-hidden="true"
+        >
+          <line x1="50" y1="50" x2="15" y2="22" />
+          <line x1="50" y1="50" x2="80" y2="28" />
+          <line x1="50" y1="50" x2="18" y2="82" />
+        </svg>
+      </div>
+
+    </section>
+
+
+    <section class="project-showcase hugin-showcase">
+      <div class="project-stage">
+
+        <div class="project-copy">
+          <div class="project-number">01</div>
+
+          <p class="project-label">Embedded systems · Home automation</p>
+
+          <h2>Hugin</h2>
+
+          <p class="project-lead">
+            One sensor platform instead of a room full of separate devices.
+          </p>
+
+          <p class="project-description">
+            A local-first room sensor platform combining presence and environmental
+            sensing with ESP32, ESPHome and Home Assistant.
+          </p>
+
+          <a class="project-link" href="/projects/hugin">
+            Explore Hugin <span aria-hidden="true">→</span>
+          </a>
+        </div>
+
+        <div class="project-visual hugin-visual" aria-hidden="true">
+          <div class="sensor-ring ring-outer"></div>
+          <div class="sensor-ring ring-inner"></div>
+
+          <div class="sensor-core">
+            <span>HUGIN</span>
+            <strong>ROOM 01</strong>
+          </div>
+
+          <span class="sensor-data data-presence">PRESENCE</span>
+          <span class="sensor-data data-environment">ENVIRONMENT</span>
+          <span class="sensor-data data-local">LOCAL</span>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="project-showcase homelab-showcase">
+      <div class="project-stage">
+
+        <div class="project-copy">
+          <div class="project-number">02</div>
+
+          <p class="project-label">
+            Linux · Networking · Self-hosting
+          </p>
+
+          <h2>Homelab</h2>
+
+          <p class="project-lead">
+            My home server that grew into a homelab.
+          </p>
+
+          <p class="project-description">
+            I use it to run services at home and to learn more about Linux,
+            Docker, networking and automation along the way.
+          </p>
+
+          <a class="project-link" href="/projects/homelab">
+            Explore Homelab <span aria-hidden="true">→</span>
+          </a>
+        </div>
+
+        <div class="project-visual homelab-visual" aria-hidden="true">
+
+          <div class="network-line"></div>
+
+          <div class="network-node node-internet">
+            <span>01</span>
+            <strong>INTERNET</strong>
+          </div>
+
+          <div class="network-node node-gateway">
+            <span>02</span>
+            <strong>GATEWAY</strong>
+          </div>
+
+          <div class="network-node node-server">
+            <span>03</span>
+            <strong>LINUX SERVER</strong>
+          </div>
+
+          <div class="network-node node-services">
+            <span>04</span>
+            <strong>DOCKER SERVICES</strong>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <section class="project-showcase bachelor-showcase">
+      <div class="project-stage">
+
+        <div class="project-copy">
+          <div class="project-number">03</div>
+
+          <p class="project-label">
+            Chalmers · Networking · Software development
+          </p>
+
+          <h2>Bachelor Project</h2>
+
+          <p class="project-lead">
+            Exploring a network-driven approach to detecting missing computers.
+          </p>
+
+          <p class="project-description">
+            In a six-person Chalmers team, we researched, designed and built a system
+            for monitoring shared computers using network discovery, heartbeat signals
+            and a central backend.
+          </p>
+
+          <a class="project-link" href="/projects/bachelor-project">
+            Explore project <span aria-hidden="true">→</span>
+          </a>
+        </div>
+
+        <div class="project-visual heartbeat-visual" aria-hidden="true">
+        <svg
+          class="heartbeat-links"
+          viewBox="0 0 100 100"
+          preserveAspectRatio="none"
+        >
+          <line class="heartbeat-path path-one" x1="22" y1="22" x2="50" y2="50" />
+          <line class="heartbeat-path path-two" x1="78" y1="24" x2="50" y2="50" />
+          <line class="heartbeat-path path-three" x1="22" y1="78" x2="50" y2="50" />
+          <line class="heartbeat-path path-four" x1="78" y1="76" x2="50" y2="50" />
+        </svg>
+          <div class="heartbeat-monitor">
+            <span>MONITOR</span>
+            <strong>DEVICE STATUS</strong>
+          </div>
+
+          <div class="heartbeat-device device-one">
+            <span class="status-dot"></span>
+            PC-01
+          </div>
+
+          <div class="heartbeat-device device-two">
+            <span class="status-dot"></span>
+            PC-02
+          </div>
+
+          <div class="heartbeat-device device-three">
+            <span class="status-dot"></span>
+            PC-03
+          </div>
+
+          <div class="heartbeat-device device-four">
+            <span class="status-dot"></span>
+            PC-04
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <section class="home-closing">
+      <div class="closing-label">
+        <span>04</span>
+        <span>About</span>
+      </div>
+
+      <div class="closing-content">
+        <p class="closing-statement">
+          Most of my projects start with a need.
+          <span>Then comes the question: can I build it myself?</span>
+        </p>
+
+        <div class="closing-details">
+          <p>
+            I work with systems administration, primarily Melior,
+            and have studied Information Technology at Chalmers. Outside work,
+            that curiosity has led to everything from running my own server and
+            network to building sensors and automations.
+          </p>
+
+          <div class="closing-links">
+            <a href="/about">More about me <span>→</span></a>
+
+            <a
+              href="https://github.com/Pdoxxy"
+              target="_blank"
+              rel="noreferrer"
+            >
+              GitHub <span>↗</span>
+            </a>
+
+            <a href="/cv">CV <span>→</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
 </Layout>

@@ -1,0 +1,201 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import '../../styles/hugin.css';
+---
+
+<Layout>
+
+  <main class="hugin-page">
+
+    <section class="hugin-hero">
+      <div class="hugin-heading">
+        <a class="back-link" href="/projects">← Projects</a>
+
+        <p class="hugin-label">
+          01 · Embedded systems · Home automation
+        </p>
+
+        <h1 class="hugin-title">Hugin</h1>
+
+        <p class="hugin-intro">
+          A local-first room sensor platform combining presence and
+          environmental sensing in a single device.
+        </p>
+      </div>
+
+      <div class="hugin-meta">
+        <div>
+          <span>Platform</span>
+          <strong>ESP32-C6</strong>
+        </div>
+
+        <div>
+          <span>Integration</span>
+          <strong>ESPHome · Home Assistant</strong>
+        </div>
+
+        <div>
+          <span>Status</span>
+          <strong>Prototype</strong>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="story-section">
+      <div class="story-heading">
+        <span>Overview</span>
+        <h2>
+          One platform.<br />
+          Multiple sensors.
+        </h2>
+      </div>
+
+      <div class="story-copy">
+        <p>
+          Hugin is built around an ESP32-C6 and ESPHome, bringing several
+          sensors together in one device. Their data is exposed to Home Assistant,
+          where it can be used for dashboards and automations.
+        </p>
+      </div>
+    </section>
+
+    <section class="story-section">
+      <div class="story-heading">
+        <span>Motivation</span>
+        <h2>
+          Why I built it.
+        </h2>
+      </div>
+
+      <div class="story-copy">
+        <p>
+          I wanted a single room sensor that could combine several functions
+          instead of relying on separate devices for each one. I could not find
+          an off-the-shelf multisensor that matched what I had in mind, so I
+          decided to build one myself.
+        </p>
+
+        <p>
+          That also means I can choose exactly which sensors to use, keep the
+          system local and change the hardware as the project develops. Along the
+          way, I am learning more about embedded development, sensor integration
+          and hardware prototyping.
+        </p>
+      </div>
+    </section>
+
+    <section class="architecture-section">
+      <div class="architecture-heading">
+        <span>Architecture</span>
+        <h2>From room data<br />to automation.</h2>
+
+        <p>
+          Hugin sends presence and environmental data to Home Assistant
+          through ESPHome.
+        </p>
+      </div>
+
+      <div class="architecture-flow">
+        <div class="architecture-node">
+          <span class="node-number">01</span>
+          <div>
+            <strong>Local sensors</strong>
+            <p>Presence and environmental data</p>
+          </div>
+        </div>
+
+        <div class="architecture-connector" aria-hidden="true">
+          <span></span>
+        </div>
+
+        <div class="architecture-node architecture-node-primary">
+          <span class="node-number">02</span>
+          <div>
+            <strong>Hugin</strong>
+            <p>ESP32-C6 · ESPHome</p>
+          </div>
+        </div>
+
+        <div class="architecture-connector" aria-hidden="true">
+          <span></span>
+        </div>
+
+        <div class="architecture-node">
+          <span class="node-number">03</span>
+          <div>
+            <strong>Home Assistant</strong>
+            <p>Data · dashboards · automations</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="status-section">
+      <div class="status-heading">
+        <span>Current status</span>
+
+        <h2>
+          Prototype now.<br />
+          Permanent hardware next.
+        </h2>
+      </div>
+
+      <div class="status-content">
+        <div class="status-state">
+          <span class="status-dot"></span>
+          <div>
+            <small>Current phase</small>
+            <strong>Prototyping & testing</strong>
+          </div>
+        </div>
+
+        <div class="status-steps">
+          <div class="status-step">
+            <span>01</span>
+            <div>
+              <strong>Prototype</strong>
+              <p>
+                Develop and test the ESP32-C6 platform, sensors and
+                Home Assistant integration.
+              </p>
+            </div>
+          </div>
+
+          <div class="status-step">
+            <span>02</span>
+            <div>
+              <strong>Permanent build</strong>
+              <p>
+                Move from a breadboard prototype to hardware I can
+                install in a room.
+              </p>
+            </div>
+          </div>
+
+          <div class="status-step">
+            <span>03</span>
+            <div>
+              <strong>Custom hardware</strong>
+              <p>
+                Explore a dedicated PCB and enclosure once the sensor
+                configuration has been validated.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <a
+          class="github-link"
+          href="https://github.com/Pdoxxy/hugin"
+          target="_blank"
+          rel="noreferrer"
+        >
+          View Hugin on GitHub
+          <span aria-hidden="true">↗</span>
+        </a>
+      </div>
+    </section>
+
+  </main>
+</Layout>

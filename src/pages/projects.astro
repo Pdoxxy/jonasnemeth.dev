@@ -1,0 +1,121 @@
+---
+import Layout from '../layouts/Layout.astro';
+import '../styles/projects.css';
+---
+
+<Layout>
+  <main class="projects-page">
+
+    <section class="projects-hero">
+      <p class="projects-label">Selected work</p>
+
+      <h1>Projects</h1>
+
+      <p class="projects-intro">
+        A selection of projects that started with a problem and an idea for a solution,
+        usually before I knew how to build it.
+      </p>
+    </section>
+
+
+    <section class="project-index">
+
+      <a class="project-row" href="/projects/hugin">
+        <div class="project-index-number">01</div>
+
+        <div class="project-index-main">
+          <p class="project-type">
+            Embedded systems · Home automation
+          </p>
+
+          <h2>Hugin</h2>
+
+          <p class="project-summary">
+            A room sensor platform I started building when I couldn't find
+            a ready-made solution that combined the sensors and local control I wanted.
+          </p>
+        </div>
+
+        <div class="project-index-meta">
+          <span>ESP32-C6</span>
+          <span>ESPHome</span>
+          <span>Home Assistant</span>
+        </div>
+
+        <div class="project-arrow" aria-hidden="true">→</div>
+      </a>
+
+
+      <a class="project-row" href="/projects/homelab">
+        <div class="project-index-number">02</div>
+
+        <div class="project-index-main">
+          <p class="project-type">
+            Linux · Networking · Self-hosting
+          </p>
+
+          <h2>Homelab</h2>
+
+          <p class="project-summary">
+            What started as a home server grew into an environment for running
+            my own services and learning Linux, Docker, networking and automation.
+          </p>
+        </div>
+
+        <div class="project-index-meta">
+          <span>Linux</span>
+          <span>Docker</span>
+          <span>UniFi</span>
+        </div>
+
+        <div class="project-arrow" aria-hidden="true">→</div>
+      </a>
+
+
+      <a class="project-row" href="/projects/bachelor-project">
+        <div class="project-index-number">03</div>
+
+        <div class="project-index-main">
+          <p class="project-type">
+            Chalmers · Networking · Software development
+          </p>
+
+          <h2>Bachelor Project</h2>
+
+          <p class="project-summary">
+            A six-person Chalmers project where we researched, designed and built
+            a network-based approach to detecting when shared computers stopped reporting.
+          </p>
+        </div>
+
+        <div class="project-index-meta">
+          <span>Go</span>
+          <span>Java</span>
+          <span>Spring Boot</span>
+        </div>
+
+        <div class="project-arrow" aria-hidden="true">→</div>
+      </a>
+
+    </section>
+
+
+    <section class="projects-closing">
+      <span>More on GitHub</span>
+
+      <p>
+        The portfolio focuses on the ideas and decisions behind each project.
+        The code, configuration and more technical details live on GitHub.
+      </p>
+
+      <a
+        href="https://github.com/Pdoxxy"
+        target="_blank"
+        rel="noreferrer"
+      >
+        View on GitHub <span aria-hidden="true">↗</span>
+      </a>
+    </section>
+
+  </main>
+</Layout>

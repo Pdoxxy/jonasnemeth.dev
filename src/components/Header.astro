@@ -1,0 +1,59 @@
+<header class="site-header">
+  <a class="brand" href="/">Jonas Németh</a>
+
+  <nav>
+    <a href="/projects">Projects</a>
+    <a href="/about">About</a>
+    <a href="/cv">CV</a>
+    <a href="/contact">Contact</a>
+  </nav>
+</header>
+
+<style is:global>
+  .site-header {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 1.5rem 2rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+
+  .brand {
+    color: #e8eaed;
+    text-decoration: none;
+    font-weight: 700;
+  }
+
+  .site-header nav {
+    display: flex;
+    gap: 1.5rem;
+  }
+
+  .site-header nav a {
+    color: #aeb4bf;
+    text-decoration: none;
+  }
+
+  .site-header nav a:hover {
+    color: #e8eaed;
+  }
+
+  @media (max-width: 700px) {
+    .site-header {
+      align-items: flex-start;
+      flex-direction: column;
+      gap: 1.25rem;
+
+      padding: 1.5rem 1.25rem;
+    }
+
+    .site-header nav {
+      width: 100%;
+      justify-content: space-between;
+      gap: 0.75rem;
+    }
+  }
+</style>
